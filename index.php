@@ -64,6 +64,22 @@
      </tr>
      </thead>
 
+    <!-- <tbody>
+     <?php foreach ($hotels as $hotel) { ?>
+      <tr>
+      <?php foreach ($hotel as $key => $element) {
+        if($key === 'parking' && $element){
+          echo "<td>Sì</td>";
+        }elseif($key === 'parking' && !$element){
+          echo "<td>No</td>";
+        }else{
+          echo "<td>$element</td>";
+        }
+      } ?>
+      </tr>
+     <?php } ?>
+     </tbody> -->
+
      <tbody>
      <?php foreach ($hotels as $hotel) { ?>
       <tr>
@@ -72,13 +88,11 @@
         <td><?php echo $hotel['parking'] ? 'Sì' : 'No'?></td>
         <td><?php echo $hotel['vote']?></td>
         <td><?php echo $hotel['distance_to_center']?></td>
-        
       </tr>
       
      <?php } ?>
-
      
-       
+     </tbody>
    </table>
   </div>
 </body>
